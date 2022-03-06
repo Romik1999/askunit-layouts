@@ -1,0 +1,9 @@
+*.pdf
+*.docx
+*.zip
+
+.idea
+/node_modules
+/dist
+package-lock.json
+.prettierrc.js

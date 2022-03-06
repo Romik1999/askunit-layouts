@@ -1,0 +1,64 @@
+.mw_theme_default {
+  background-color: #ffffff;
+  width: 600px;
+  min-height: 50px;
+  max-width: 100%;
+  min-width: 320px;
+  border: none;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  transform: translateY(20px);
+  -webkit-transition: opacity 0.3s ease-out 0.3s,
+    -webkit-transform 0.3s ease-out 0.3s;
+  -moz-transition: opacity 0.3s ease-out 0.3s, -moz-transform 0.3s ease-out 0.3s;
+  -o-transition: opacity 0.3s ease-out 0.3s;
+  transition: opacity 0.3s ease-out 0.3s, transform 0.3s ease-out 0.3s;
+}
+.mw_theme_default.mw_state_opened {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  transform: translateY(0);
+}
+.mw_theme_default .mw__title {
+  padding: 20px 30px 0;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+}
+.mw_theme_default .mw__content {
+  color: #000000;
+  font-size: 14px;
+  padding: 20px 30px 30px;
+}
+.mw_theme_default .mw__close {
+  width: 30px;
+  height: 30px;
+  background: 50% 50% no-repeat url("images/mw-close.png");
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+.mw_theme_default .mw__loading {
+  background: #ffffff 50% 50% no-repeat url("images/mw-loading.gif");
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  opacity: 0.5;
+}
+.mw-overlay_theme_default {
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+}
