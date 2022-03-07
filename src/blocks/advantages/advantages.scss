@@ -1,0 +1,49 @@
+@import "src/scss/typography.scss";
+@import "src/scss/colors.scss";
+@import "src/scss/mixins.scss";
+
+
+.advantages {
+  padding: 50px 16px;
+  background-color: $grey-lite;
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+  }
+
+  &__item {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.advantages-item {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 167%;
+  color: $text;
+
+  &__img {
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
