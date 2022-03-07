@@ -1,0 +1,74 @@
+@import "src/scss/typography.scss";
+@import "src/scss/colors.scss";
+@import "src/scss/mixins.scss";
+
+.form {
+  width: 100%;
+
+  &_row {
+    display: flex;
+    grid-gap: 30px;
+    align-items: center;
+
+    @media screen and (max-width: 1199px) {
+      grid-gap: 20px;
+    }
+
+    @media screen and (max-width: 575px) {
+      flex-direction: column;
+    }
+  }
+
+  &__input {
+    background: #FFFFFF;
+    border: 1px solid rgba(43, 125, 224, 0.3);
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: 40px;
+    width: 100%;
+    transition: 0.2s;
+    padding: 12px 22px;
+
+    &::placeholder {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 11px;
+      line-height: 143%;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #777777;
+    }
+
+    &:focus {
+      border: 1px solid #2B7DE0;
+      outline: none;
+    }
+  }
+
+  &__button {
+    background-color: #2B7DE0;
+    border: 1px solid #2B7DE0;
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: 40px;
+    font-size: 11px;
+    line-height: 143%;
+    text-align: center;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: $white;
+    transition: 0.2s;
+    cursor: pointer;
+    padding: 12px 22px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: $white;
+      color: #2B7DE0;
+    }
+  }
+}

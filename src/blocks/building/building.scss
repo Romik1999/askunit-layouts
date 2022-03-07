@@ -28,6 +28,18 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 769px) {
+      grid-gap: 20px;
+    }
+
+    @media screen and (max-width: 575px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__house {
