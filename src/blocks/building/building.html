@@ -3,57 +3,21 @@
         <div class="building__title">Строительство домов</div>
         <div class="building__desc">Своя недвижимость – мечта большинства людей. Цены на квартиры растут с каждым годом. Строительство собственного дома — это оптимальное решение. Стоимость строительства дома в Екатеринбурге начинается от 30000 рублей за м2 в комплектации коробка с кровлей, и от 65000 рублей за м2 в комплектации под чистовую отделку с коммуникациями и отделкой фасада.</div>
         <div class="building__triggers">
-            <div class="building-triggers">
-                <div class="building-triggers__item active">из газоблока</div>
-                <div class="building-triggers__item active">из керамического блока</div>
-                <div class="building-triggers__item active">из кирпича</div>
-            </div>
+            @@include('triggers/triggers.html')
         </div>
         <div class="building__houses">
-            <a class="building__house" href="#">
-                <div class="building-house">
-                    <div class="building-house__img">
-                        <img src="images/building-house-1.png">
-                    </div>
-                    <div class="building-house__body">
-                        <div class="building-house__title">Проект одноэтажного дома KT-167-9U 167,9 м2</div>
-                        <div class="building-house__price">от 5 037 000 руб</div>
-                    </div>
-                </div>
-            </a>
-            <a class="building__house" href="#">
-                <div class="building-house">
-                    <div class="building-house__img">
-                        <img src="images/building-house-1.png">
-                    </div>
-                    <div class="building-house__body">
-                        <div class="building-house__title">Проект одноэтажного дома KT-167-9U 167,9 м2</div>
-                        <div class="building-house__price">от 5 037 000 руб</div>
-                    </div>
-                </div>
-            </a>
-            <a class="building__house" href="#">
-                <div class="building-house">
-                    <div class="building-house__img">
-                        <img src="images/building-house-1.png">
-                    </div>
-                    <div class="building-house__body">
-                        <div class="building-house__title">Проект одноэтажного дома KT-167-9U 167,9 м2</div>
-                        <div class="building-house__price">от 5 037 000 руб</div>
-                    </div>
-                </div>
-            </a>
-            <a class="building__house" href="#">
-                <div class="building-house">
-                    <div class="building-house__img">
-                        <img src="images/building-house-1.png">
-                    </div>
-                    <div class="building-house__body">
-                        <div class="building-house__title">Проект одноэтажного дома KT-167-9U 167,9 м2</div>
-                        <div class="building-house__price">от 5 037 000 руб</div>
-                    </div>
-                </div>
-            </a>
+            <div class="building__house">
+                @@include('building-house/building-house.html')
+            </div>
+            <div class="building__house">
+                @@include('building-house/building-house.html')
+            </div>
+            <div class="building__house">
+                @@include('building-house/building-house.html')
+            </div>
+            <div class="building__house">
+                @@include('building-house/building-house.html')
+            </div>
         </div>
     </div>
 </section>

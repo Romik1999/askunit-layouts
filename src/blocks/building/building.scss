@@ -1,0 +1,36 @@
+@import "src/scss/typography.scss";
+@import "src/scss/colors.scss";
+@import "src/scss/mixins.scss";
+
+.building {
+  padding: 85px 15px;
+  border-bottom: 1px solid $grey;
+
+  &__title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 135%;
+  }
+
+  &__desc {
+    font-size: 15px;
+    line-height: 167%;
+    color: $grey-dark;
+    margin-top: 40px;
+  }
+
+  &__triggers {
+    margin-top: 40px;
+  }
+
+  &__houses {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+  }
+
+  &__house {
+    display: flex;
+  }
+}
