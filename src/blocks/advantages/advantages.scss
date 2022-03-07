@@ -8,16 +8,31 @@
   background-color: $grey-lite;
 
   &__items {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    column-gap: 20px;
+    flex-wrap: wrap;
+    //column-gap: 20px;
+
+    @media screen and (max-width: 769px) {
+      flex-direction: column;
+    }
   }
 
   &__item {
     width: 33%;
     display: flex;
     justify-content: center;
+
+    @media screen and (max-width: 992px) {
+      width: 50%;
+      margin: auto;
+      margin-bottom: 40px;
+    }
+    @media screen and (max-width: 769px) {
+      width: 100%;
+    }
   }
 }
 
