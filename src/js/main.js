@@ -47,4 +47,12 @@ $(function () {
             }
         },
     });
+
+    $('.stages__trigger').click(function () {
+        let activeNumber = $(this).data('tab');
+        $(this).parent().find('.active').removeClass('active');
+        $(this).addClass('active');
+        $('.stages__items .active').removeClass('active');
+        $('.stages__items [data-tab="' + activeNumber + '"]').addClass('active');
+    });
 });
