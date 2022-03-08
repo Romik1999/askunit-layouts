@@ -27,6 +27,34 @@
       grid-template-columns: 1fr;
     }
   }
+
+  &__button {
+    border: 1px solid #2B7DE0;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 12px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 40px;
+    transition: 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    width: fit-content;
+
+    font-size: 11px;
+    line-height: 143%;
+    text-align: center;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #2B7DE0;
+
+    &:hover{
+      background-color: #2B7DE0;
+      color: $white;
+    }
+  }
 }
 
 .interest-item {
@@ -91,7 +119,7 @@
     color: #333333;
     display: block;
 
-    &:hover{
+    &:hover {
       text-decoration: underline;
     }
   }
