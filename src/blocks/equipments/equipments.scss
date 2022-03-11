@@ -21,7 +21,10 @@
 
   &__table {
     margin-top: 55px;
-    overflow: auto;
+
+    @media screen and (max-width: 575px) {
+      overflow-x: scroll;
+    }
   }
 }
 
