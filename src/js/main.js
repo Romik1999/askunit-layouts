@@ -55,4 +55,35 @@ $(function () {
         $('.stages__items .active').removeClass('active');
         $('.stages__items [data-tab="' + activeNumber + '"]').addClass('active');
     });
+
+    var swiper3 = new Swiper(".advantages-slider", {
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".advantages-slider__arrow_next",
+            prevEl: ".advantages-slider__arrow_prev",
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 2,
+            },
+            575: {
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 1,
+            },
+            992: {
+                slidesPerView: 2,
+            },
+            1441: {
+                slidesPerView: 3,
+            }
+        },
+    });
+
 });

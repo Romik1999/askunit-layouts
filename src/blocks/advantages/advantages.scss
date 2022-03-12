@@ -1,64 +1,160 @@
-@import "src/scss/typography.scss";
-@import "src/scss/colors.scss";
-@import "src/scss/mixins.scss";
-
-
 .advantages {
-  padding: 50px 16px;
-  background-color: $grey-lite;
+  padding: 80px 15px;
+
+  &__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 135%;
+    color: #333333;
+  }
 
   &__items {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    //column-gap: 20px;
+    display: grid;
+    align-items: flex-start;
+    margin-top: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
 
     @media screen and (max-width: 769px) {
-      flex-direction: column;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    @media screen and (max-width: 575px) {
+      display: block;
     }
   }
 
   &__item {
-    width: 33%;
-    display: flex;
-    justify-content: center;
 
-    @media screen and (max-width: 992px) {
-      width: 50%;
-      margin: auto;
-      margin-bottom: 40px;
+    &:not(:last-child) {
+      @media screen and (max-width: 575px) {
+        margin-bottom: 40px;
+      }
     }
-    @media screen and (max-width: 769px) {
-      width: 100%;
+
+    &_slider {
+      grid-column: span 2;
+
+      @media screen and (max-width: 769px) {
+
+      }
+
+      & .advantages-item__body {
+        padding: 0 60px;
+      }
+    }
+
+
+    &_camera {
+      @media screen and (max-width: 769px) {
+        grid-column: 2 / 3;
+        grid-row: 1;
+      }
+    }
+
+    &_contract {
+      @media screen and (max-width: 769px) {
+        grid-column: 1 / 2;
+        grid-row: 1;
+      }
     }
   }
 }
 
 .advantages-item {
-  display: flex;
-  align-items: center;
-  column-gap: 20px;
+  &__title {
+    font-family: 'Montserrat';
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    min-height: 44px;
+  }
 
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 167%;
-  color: $text;
+  &__body {
+    margin-top: 40px;
+    position: relative;
 
-  &__img {
-    width: 62px;
-    height: 62px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @media screen and (max-width: 575px) {
+      margin-top: 20px;
+    }
 
     & img {
+      max-width: 100%;
       width: 100%;
-      height: 100%;
-      object-fit: contain;
+      height: auto;
+    }
+  }
+}
+
+
+.advantages-slider {
+  overflow: hidden;
+
+  &__item {
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% - 9px);
+    transition: 0.2s;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      background-color: #C4C4C4;
+      width: 20px;
+      height: 2px;
+    }
+
+    &:hover {
+      &:after,
+      &:before {
+        background-color: $blue;
+      }
+    }
+
+    &_prev {
+      left: 0;
+
+      &:before {
+        transform: rotate(-45deg);
+        left: 12px;
+        top: 18px;
+      }
+
+      &:after {
+        transform: rotate(45deg);
+        left: 12px;
+        bottom: 18px;
+      }
+    }
+
+    &_next {
+      right: 0;
+
+      &:before {
+        transform: rotate(45deg);
+        right: 12px;
+        top: 18px;
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+        right: 12px;
+        bottom: 18px;
+      }
     }
   }
 }
