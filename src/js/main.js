@@ -86,4 +86,29 @@ $(function () {
         },
     });
 
+
+    var swiper4 = new Swiper(".reviews-slider__swiper", {
+        loop: true,
+        slidesPerView: 4,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".reviews-slider__arrow_next",
+            prevEl: ".reviews-slider__arrow_prev",
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1199: {
+                slidesPerView: 3,
+            },
+            1440: {
+                slidesPerView: 4,
+            }
+        },
+    });
+
 });
