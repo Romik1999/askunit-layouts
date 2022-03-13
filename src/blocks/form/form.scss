@@ -10,6 +10,10 @@
     grid-gap: 30px;
     align-items: center;
 
+    & .form__input{
+      margin-bottom: 0;
+    }
+
     @media screen and (max-width: 1199px) {
       grid-gap: 20px;
     }
@@ -28,6 +32,7 @@
     width: 100%;
     transition: 0.2s;
     padding: 12px 22px;
+    margin-bottom: 20px;
 
     &::placeholder {
       font-family: Montserrat;

@@ -111,4 +111,22 @@ $(function () {
         },
     });
 
+
+    $(".faq__item").click(function () {
+        if ($(this).hasClass("active")) {
+            $(this)
+                .removeClass("active")
+                .find(".faq-item__desc")
+                .slideUp();
+        } else {
+            $(this)
+                .addClass("active")
+                .find(".faq-item__desc")
+                .slideDown()
+                .closest(".faq__item")
+                .siblings('.faq__item.active').removeClass('active')
+                .find('.faq-item__desc ').slideUp();
+        }
+    });
+
 });
