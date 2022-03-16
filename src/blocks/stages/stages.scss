@@ -164,6 +164,25 @@
 
   &__form {
     margin-top: 20px;
+
+    & .form {
+      display: flex;
+      align-items: center;
+      column-gap: 30px;
+
+      & .form__input {
+        margin-bottom: 0;
+      }
+
+      @media screen and (max-width: 1199px) {
+        grid-gap: 20px;
+      }
+
+      @media screen and (max-width: 575px) {
+        flex-direction: column;
+      }
+    }
+
   }
 }
 
