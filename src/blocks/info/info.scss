@@ -1,0 +1,64 @@
+@import "src/scss/typography.scss";
+@import "src/scss/colors.scss";
+@import "src/scss/mixins.scss";
+
+
+.info {
+  padding: 50px 16px;
+  background-color: $grey-lite;
+
+  &__items {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    //column-gap: 20px;
+
+    @media screen and (max-width: 769px) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 992px) {
+      width: 50%;
+      margin: auto;
+      margin-bottom: 40px;
+    }
+    @media screen and (max-width: 769px) {
+      width: 100%;
+    }
+  }
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 167%;
+  color: $text;
+
+  &__img {
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

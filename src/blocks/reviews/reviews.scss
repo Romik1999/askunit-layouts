@@ -1,0 +1,250 @@
+.reviews {
+  padding: 80px 15px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 135%;
+    color: #333333;
+  }
+
+  &__slider {
+    position: relative;
+    margin-top: 40px;
+  }
+
+  &__button {
+    border: 1px solid #2B7DE0;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 143%;
+    text-align: center;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #2B7DE0;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    margin: auto;
+    margin-top: 40px;
+    padding: 12px 30px;
+    width: fit-content;
+
+    &:hover {
+      background-color: #2B7DE0;
+      color: $white;
+    }
+  }
+}
+
+.reviews-slider {
+
+  @media screen and (max-width: 1700px) {
+    padding: 0 50px;
+  }
+
+  @media screen and (max-width: 575px) {
+    padding: 0 30px;
+  }
+
+  &__swiper {
+    overflow: hidden;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__arrow {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% - 9px);
+    transition: 0.2s;
+    z-index: 10;
+    background-color: $white;
+
+    @media screen and (max-width: 575px) {
+      width: 30px;
+      height: 30px;
+    }
+
+    &:hover {
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      background-color: #C4C4C4;
+      width: 20px;
+      height: 2px;
+
+      @media screen and (max-width: 575px) {
+        width: 15px;
+      }
+    }
+
+    &:hover {
+      &:after,
+      &:before {
+        background-color: $blue;
+      }
+    }
+
+    &_prev {
+      left: -25px;
+
+      @media screen and (max-width: 1700px) {
+        left: 0;
+      }
+
+      &:before {
+        transform: rotate(-45deg);
+        left: 12px;
+        top: 17px;
+
+        @media screen and (max-width: 575px) {
+          top: 9px;
+          left: 7px;
+        }
+      }
+
+      &:after {
+        transform: rotate(45deg);
+        left: 12px;
+        bottom: 17px;
+
+
+        @media screen and (max-width: 575px) {
+          bottom: 9px;
+          left: 7px;
+        }
+      }
+    }
+
+    &_next {
+      right: -25px;
+
+      @media screen and (max-width: 1700px) {
+        right: 0;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+        right: 12px;
+        top: 17px;
+
+        @media screen and (max-width: 575px) {
+          top: 9px;
+          right: 7px;
+        }
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+        right: 12px;
+        bottom: 17px;
+
+        @media screen and (max-width: 575px) {
+          bottom: 9px;
+          right: 7px;
+        }
+      }
+    }
+  }
+}
+
+
+.reviews-item {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  min-height: 343px;
+
+  @media screen and (max-width: 575px) {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+
+
+  &__top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__img {
+    display: flex;
+    width: 80px;
+    height: 45px;
+    border-radius: 50% 50% 0px 0px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    & svg {
+      &:not(:first-child) {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  &__data {
+    font-size: 10px;
+    line-height: 130%;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #999999;
+    margin-top: 14px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 6px;
+  }
+
+  &__content {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 167%;
+    color: #777777;
+    overflow: hidden;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+
+    & img,
+    & video {
+      display: block;
+    }
+  }
+
+  &__link {
+    color: $blue;
+    text-decoration: none;
+  }
+
+
+}
