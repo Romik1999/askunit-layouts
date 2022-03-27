@@ -134,5 +134,6 @@ $(function () {
         interactive: true,
         maxWidth: 337,
         side: 'bottom',
+        arrow: false
     });
 });
