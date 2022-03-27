@@ -42,6 +42,26 @@
     }
   }
 
+  &__tooltip {
+    display: flex;
+    cursor: pointer;
+    width: fit-content;
+
+    position: absolute;
+    top: 2px;
+    right: 0;
+
+    & svg{
+      width: 100%;
+      height: 100%;
+    }
+
+    @media screen and (max-width: 769px) {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
   &__title {
     font-size: 15px;
     line-height: 120%;
@@ -71,6 +91,24 @@
     &:not(:first-child) {
       width: 232px;
     }
+
+    & span{
+      position: relative;
+      display: block;
+      width: fit-content;
+      margin: auto;
+      padding-right: 40px;
+
+      @media screen and (max-width: 769px) {
+        padding-right: 25px;
+      }
+    }
+
+    &:last-child{
+      & span{
+        width: min-content;
+      }
+    }
   }
 
   & td {
@@ -81,7 +119,7 @@
     }
 
     &:first-child {
-      width: 392px!important;
+      width: 392px !important;
     }
   }
 
@@ -95,6 +133,50 @@
 
     &_minus {
       color: #777777;
+    }
+  }
+}
+
+.tooltipster-sidetip .tooltipster-box {
+  background: $white;
+  border: 1px solid $grey-dark;
+  border-radius: 4px;
+}
+
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow {
+  top: -1px
+}
+
+.tooltipster-sidetip .tooltipster-arrow-border,
+.tooltipster-sidetip .tooltipster-arrow-background {
+  border: 10.5px solid transparent;
+}
+
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-border {
+  border-bottom-color: $grey-dark;
+}
+
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-background {
+  border-bottom-color: $white;
+}
+
+.tooltip-up {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: #777777;
+
+  @media screen and (max-width: 769px) {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  & a {
+    color: $blue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

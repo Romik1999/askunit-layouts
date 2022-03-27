@@ -129,4 +129,10 @@ $(function () {
         }
     });
 
+    $('.equipments-table__tooltip').tooltipster({
+        contentAsHTML: true,
+        interactive: true,
+        maxWidth: 337,
+        side: 'bottom',
+    });
 });
