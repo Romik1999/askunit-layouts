@@ -136,4 +136,12 @@ $(function () {
         side: 'bottom',
         arrow: false
     });
+
+    $('.equipments-table__title_tooltip').tooltipster({
+        contentAsHTML: true,
+        interactive: true,
+        maxWidth: 337,
+        side: 'right',
+        arrow: false
+    });
 });

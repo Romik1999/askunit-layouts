@@ -22,8 +22,10 @@
   &__table {
     margin-top: 55px;
 
-    @media screen and (max-width: 575px) {
+
+    @media screen and (max-width: 1080px) {
       overflow-x: scroll;
+      overflow-y: hidden;
     }
   }
 }
@@ -67,9 +69,30 @@
     line-height: 120%;
     color: #777777;
     text-align: left;
+    position: relative;
 
     @media screen and (max-width: 769px) {
       font-size: 14px;
+    }
+
+    &_tooltip{
+      position: absolute;
+      top: 10px;
+      left: 7px;
+      display: flex;
+      cursor: pointer;
+      margin-right: 5px;
+
+      & svg{
+        fill: $grey-dark;
+      }
+
+      &:hover{
+        & svg{
+          fill: $blue;
+        }
+      }
+
     }
   }
 
@@ -119,7 +142,17 @@
     }
 
     &:first-child {
+      display: flex;
+      align-items: flex-start;
+      padding-left: 30px;
       width: 392px !important;
+
+      @media screen and (max-width: 769px) {
+        width: 300px !important;
+      }
+      @media screen and (max-width: 575px) {
+        width: 250px !important;
+      }
     }
   }
 
