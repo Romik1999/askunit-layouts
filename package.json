@@ -31,5 +31,8 @@
     "gulp-webpcss": "^1.1.1",
     "prettier": "^2.2.1",
     "webp-converter": "^2.2.3"
+  },
+  "dependencies": {
+    "uglify-js": "^3.15.4"
   }
 }
