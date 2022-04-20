@@ -1,0 +1,153 @@
+@import "src/scss/typography.scss";
+@import "src/scss/colors.scss";
+@import "src/scss/mixins.scss";
+
+.hero {
+  display: grid;
+  grid-template-columns: 43% 1fr;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__info {
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__top,
+    &__bottom {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 30px;
+      padding-left: 15px;
+
+      @media screen and (max-width: 768px) {
+        padding-right: 15px;
+      }
+    }
+
+    &__top {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin: auto 0;
+    }
+
+    &__bottom {
+      background-color: $blue;
+      margin-bottom: 0;
+      padding-top: 40px;
+      padding-bottom: 40px;
+
+      @media screen and (max-width: 575px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+
+    &__inner {
+      max-width: 685px;
+      width: 100%;
+    }
+
+    &__title {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 115%;
+      color: #333333;
+
+      @media screen and (max-width: 990px) {
+        font-size: 30px;
+      }
+      @media screen and (max-width: 575px) {
+        font-size: 24px;
+      }
+    }
+
+    &__text {
+      margin-top: 20px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 160%;
+      color: #333333;
+
+      @media screen and (max-width: 575px) {
+        font-size: 18px;
+      }
+    }
+
+    &__form {
+      margin-top: 20px;
+
+      & .form {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 575px) {
+          flex-direction: column;
+        }
+
+        &__input {
+          max-width: 166px;
+          width: 100%;
+          margin-bottom: 0;
+
+          @media screen and (max-width: 575px) {
+            max-width: 100%;
+            margin-bottom: 20px;
+          }
+        }
+
+        &__button {
+          max-width: 193px;
+          width: 100%;
+          margin-left: 12px;
+
+          @media screen and (max-width: 575px) {
+            max-width: 100%;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    &__desc {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 167%;
+      color: $white;
+
+      @media screen and (max-width: 575px) {
+        font-size: 14px
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@import "src/scss/typography.scss";
+@import "src/scss/colors.scss";
+@import "src/scss/mixins.scss";
+
+.single-form {
+  display: grid;
+  grid-template-columns: 35% 1fr;
+  align-items: flex-start;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__info {
+    background-color: $blue;
+    padding-left: 15px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+
+    @media screen and (max-width: 768px) {
+      padding-right: 15px;
+    }
+  }
+
+  &__inner {
+    max-width: 517px;
+    width: 100%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 167%;
+    color: $white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media screen and (max-width: 768px) {
+      max-width: 100%;
+      padding: 20px 0;
+    }
+  }
+
+  &__form {
+    background-color: $grey-lite;
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+
+    @media screen and (max-width: 768px) {
+      padding-top: 20px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 20px;
+    }
+
+    & .form {
+      display: flex;
+      align-items: center;
+
+      @media screen and (max-width: 575px) {
+        flex-direction: column;
+      }
+
+      &__input {
+        margin-bottom: 0;
+        margin-right: 30px;
+        max-width: 258px;
+        width: 100%;
+
+        @media screen and (max-width: 575px) {
+          max-width: 100%;
+          margin-bottom: 20px;
+          margin-right: 0;
+        }
+      }
+
+      &__button {
+        max-width: 258px;
+        width: 100%;
+
+        @media screen and (max-width: 575px) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &__text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 167%;
+    color: $grey-dark;
+    margin-bottom: 20px;
+  }
+}
