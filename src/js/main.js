@@ -144,4 +144,17 @@ $(function () {
         side: 'right',
         arrow: false
     });
+
+    $('.interaction-stages__trigger').on('click', function () {
+        if ($(this).hasClass('active')) {
+            return;
+        }
+
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+
+        const sel = $('.interaction-stages__item[data-tab="' + $(this).data('tab') + '"]');
+        sel.siblings().removeClass('active');
+        sel.addClass('active');
+    });
 });
