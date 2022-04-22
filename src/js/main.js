@@ -157,4 +157,26 @@ $(function () {
         sel.siblings().removeClass('active');
         sel.addClass('active');
     });
+
+
+    var swiper3 = new Swiper(".projects-slider__swiper", {
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".projects-slider__arrow_next",
+            prevEl: ".projects-slider__arrow_prev",
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            991: {
+                slidesPerView: 3,
+            }
+        },
+    });
 });
