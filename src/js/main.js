@@ -179,4 +179,26 @@ $(function () {
             }
         },
     });
+
+    var swiper4 = new Swiper(".structure-slider", {
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".structure-info__arrow_next",
+            prevEl: ".structure-info__arrow_prev",
+        },
+        pagination: {
+            el: ".structure-info__pagination",
+            type: "fraction",
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+        },
+    });
 });
