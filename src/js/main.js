@@ -180,6 +180,7 @@ $(function () {
         },
     });
 
+    var menu = ['1-20', '21-40', '41-60'];
     var swiper4 = new Swiper(".structure-slider", {
         loop: true,
         slidesPerView: 2,
@@ -189,8 +190,10 @@ $(function () {
             prevEl: ".structure-info__arrow_prev",
         },
         pagination: {
-            el: ".structure-info__pagination",
-            type: "fraction",
+            el: '.structure-info__pagination',
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (menu[index]) + '</span>';
+            },
         },
         breakpoints: {
             300: {

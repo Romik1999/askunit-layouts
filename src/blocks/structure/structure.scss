@@ -171,7 +171,7 @@
 
   &__pagination {
     width: fit-content;
-    margin: 0 20px;
+    margin: 0 10px;
     font-size: 15px;
     line-height: 167%;
     color: $blue;
@@ -180,9 +180,11 @@
 
 .structure-slider {
   overflow: hidden;
+  margin: 0 -15px;
+  padding: 0 15px;
 
   &__items {
-    padding: 10px 0;
+    padding: 15px 0;
   }
 
   &__item {
@@ -203,5 +205,21 @@
     & ol {
       padding-left: 20px;
     }
+  }
+}
+
+.swiper-pagination-bullet {
+  display: none;
+  width: 50px;
+  height: auto;
+  font-size: 15px;
+  line-height: 167%;
+  color: $blue;
+  white-space: nowrap;
+  background-color: transparent;
+  justify-content: center;
+
+  &-active {
+    display: flex;
   }
 }
