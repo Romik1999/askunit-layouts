@@ -1,0 +1,144 @@
+@import "src/scss/typography.scss";
+@import "src/scss/colors.scss";
+@import "src/scss/mixins.scss";
+
+.service-houses {
+  padding: 120px 0;
+
+  &__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    color: #333333;
+  }
+
+  &__presets {
+    margin-top: 40px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    text-decoration: none;
+  }
+
+
+  &__button {
+    border: 1px solid #2B7DE0;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 143%;
+    text-align: center;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #2B7DE0;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    margin: auto;
+    margin-top: 40px;
+    padding: 12px 30px;
+    width: fit-content;
+
+    &:hover {
+      background-color: #2B7DE0;
+      color: $white;
+    }
+  }
+}
+
+.service-house {
+  width: 100%;
+  display: block;
+  background: #FFFFFF;
+  border: 1px solid #EFF1F5;
+  box-sizing: border-box;
+  border-radius: 0px 0px 3px 3px;
+  transition: 0.2s;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  &__img {
+    width: 100%;
+    height: 308px;
+
+    @media screen and (max-width: 1250px) {
+      height: 250px;
+    }
+
+    @media screen and (max-width: 992px) {
+      height: 300px;
+    }
+
+    @media screen and (max-width: 769px) {
+      height: 200px;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__body {
+    padding-top: 22px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 30px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    color: $text;
+  }
+
+  &__price {
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 130%;
+    color: $blue;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+
+}
+
+@media screen and (max-width: 1026px) {
+
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 769px) {
+
+}
+
+@media screen and (max-width: 575px) {
+
+}
+
+@media screen and (max-width: 426px) {
+
+}
