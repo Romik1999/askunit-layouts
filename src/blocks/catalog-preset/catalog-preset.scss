@@ -1,0 +1,73 @@
+@import "src/scss/typography.scss";
+@import "src/scss/colors.scss";
+@import "src/scss/mixins.scss";
+
+.catalog-preset {
+  margin-bottom: 40px;
+}
+
+.preset{
+  &-item {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 20px;
+
+    &__title {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 167%;
+      color: #000000;
+      white-space: nowrap;
+
+      @media screen and (max-width: 575px) {
+        font-size: 13px;
+        line-height: 120%;
+      }
+    }
+
+    &__values {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    &__value {
+      margin-right: 12px;
+      margin-bottom: 12px;
+      padding: 4px 20px;
+      background-color: #F8F9FB;
+      border: 1px solid #F8F9FB;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 86px;
+      cursor: pointer;
+      transition: 0.2S;
+
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 167%;
+      color: #000000;
+
+      @media screen and (max-width: 575px) {
+        font-size: 13px;
+        line-height: 120%;
+        padding: 4px 10px;
+      }
+
+      &:hover {
+        border: 1px solid #2B7DE0;
+      }
+
+      &.active {
+        background-color: #2B7DE0;
+        border: 1px solid #2B7DE0;
+        color: #FFFFFF;
+      }
+    }
+  }
+}
