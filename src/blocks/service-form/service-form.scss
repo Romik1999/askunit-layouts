@@ -2,6 +2,113 @@
 @import "src/scss/colors.scss";
 @import "src/scss/mixins.scss";
 
-.single-form {
+.service-form {
+  background-color: #F8F9FB;
 
+  &__top {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  &__info {
+    padding-top: 70px;
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+    max-width: 800px;
+    min-width: 400px;
+    width: 100%;
+
+    @media screen and (max-width: 767px) {
+      max-width: 100%;
+      min-width: unset;
+      padding: 30px 15px;
+    }
+  }
+
+  &__image {
+    max-width: 431px;
+    width: 100%;
+    height: auto;
+    display: flex;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
+    & img {
+      width: 100%;
+      height: -webkit-fill-available;
+      object-fit: cover;
+    }
+  }
+
+  &__bottom {
+    min-height: 96px;
+    padding: 35px;
+    background: #2B7DE0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 125%;
+    color: #FFFFFF;
+
+    @media screen and (max-width: 767px) {
+      min-height: unset;
+      padding: 15px;
+    }
+    @media screen and (max-width: 575px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.service-info {
+  &__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 135%;
+    color: #333333;
+
+    @media screen and (max-width: 575px) {
+      font-size: 20px;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 167%;
+    color: #777777;
+    margin-top: 20px;
+
+    @media screen and (max-width: 575px) {
+      font-size: 13px;
+    }
+  }
+
+  &__form {
+    margin-top: 45px;
+
+    @media screen and (max-width: 575px) {
+      margin-top: 20px;
+    }
+
+    & .form {
+      max-width: 615px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 33px;
+      grid-row-gap: 24px;
+
+      @media screen and (max-width: 575px) {
+        grid-template-columns: 1fr;
+      }
+
+      &__input {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
