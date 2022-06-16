@@ -205,6 +205,15 @@ $(function () {
         },
     });
 
+
+    $('.sets-title__tooltip').tooltipster({
+        contentAsHTML: true,
+        interactive: true,
+        maxWidth: 337,
+        side: 'bottom',
+        arrow: false
+    });
+
     $('[name*="phone"]').inputmask({
         mask: '+7 999 999 99 99'
     });
