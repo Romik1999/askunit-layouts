@@ -4,13 +4,25 @@
 
 .catalog-preset {
   margin-bottom: 40px;
+
+  &__item {
+    &:not(:last-child) {
+      @media screen and (max-width: 375px) {
+        margin-bottom: 10px;
+      }
+    }
+  }
 }
 
-.preset{
+.preset {
   &-item {
     display: flex;
     align-items: flex-start;
     column-gap: 20px;
+
+    @media screen and (max-width: 375px) {
+      flex-direction: column;
+    }
 
     &__title {
       font-family: 'Montserrat';
@@ -24,6 +36,9 @@
       @media screen and (max-width: 575px) {
         font-size: 13px;
         line-height: 120%;
+      }
+      @media screen and (max-width: 375px) {
+        margin-bottom: 12px;
       }
     }
 

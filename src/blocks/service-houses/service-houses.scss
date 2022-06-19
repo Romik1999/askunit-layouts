@@ -5,6 +5,10 @@
 .service-houses {
   padding: 120px 0;
 
+  @media screen and (max-width: 575px) {
+    padding: 60px 0;
+  }
+
   &__title {
     font-family: 'Montserrat';
     font-style: normal;
@@ -22,6 +26,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 30px;
+
+    @media screen and (max-width: 575px) {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
   }
 
   &__item {
@@ -47,10 +56,17 @@
     cursor: pointer;
     text-decoration: none;
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin: auto;
     margin-top: 40px;
     padding: 12px 30px;
     width: fit-content;
+
+    @media screen and (max-width: 575px) {
+      padding: 12px;
+      width: 100%;
+    }
 
     &:hover {
       background-color: #2B7DE0;
