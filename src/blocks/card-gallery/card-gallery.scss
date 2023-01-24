@@ -1,5 +1,32 @@
 @import "src/scss/colors.scss";
 
 .card-gallery {
+  & .swiper {
+    overflow: hidden;
+  }
+}
 
+.gallery-top {
+  &__item {
+    height: 452px;
+
+    & img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.gallery-thumbs {
+  margin-top: 25px;
+  &__item {
+    height: 60px;
+
+    & img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }

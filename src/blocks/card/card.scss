@@ -7,5 +7,15 @@
     display: flex;
     align-items: flex-start;
     column-gap: 28px;
+
+    &__gallery {
+      max-width: 50%;
+      width: 100%;
+    }
+
+    &__info {
+      max-width: 50%;
+      width: 100%;
+    }
   }
 }
