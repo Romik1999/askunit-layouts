@@ -1,6 +1,4 @@
-@import "src/scss/typography.scss";
 @import "src/scss/colors.scss";
-@import "src/scss/mixins.scss";
 
 
 .structure {
@@ -34,7 +32,7 @@
     margin-top: 40px;
     padding: 0 15px;
 
-    background-image: url("../images/structure-img-1.png");
+    background-image: url("../img/structure-img-1.png");
     background-position: left;
     background-repeat: no-repeat;
     background-size: auto 100%;

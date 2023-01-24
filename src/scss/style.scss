@@ -1,9 +1,6 @@
 @import "./colors";
-@import "./mixins";
 @import "./fonts";
-@import "./typography";
 @import "./common";
-@import "./main";
 
 
 @import "../blocks/info/info";
@@ -31,3 +28,7 @@
 @import "../blocks/service-houses/service-houses";
 @import "../blocks/service-form/service-form";
 @import "../blocks/service-sets/service-sets";
+
+
+
+@import "../blocks/card/card";

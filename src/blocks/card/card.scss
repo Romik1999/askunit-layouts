@@ -1,0 +1,11 @@
+@import "src/scss/colors.scss";
+
+.card {
+  padding: 60px 15px;
+
+  &-top {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 28px;
+  }
+}
