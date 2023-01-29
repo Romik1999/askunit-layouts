@@ -233,6 +233,83 @@ $(function () {
         },
     });
 
+    $('.card-tabs__trigger').on('click', function () {
+        if ($(this).hasClass('active')) {
+            return;
+        }
+
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+
+        let sel = $('.card-tabs__content[data-tab="' + $(this).data('tab') + '"]');
+        sel.siblings().removeClass('active');
+        sel.addClass('active');
+    });
+
+    // range
+    const sumInput = document.querySelector('.form__input--range'),
+        rangeInputSum = document.querySelector('.form-range__input'),
+        rangeTrackSum = document.querySelector('.form-range__fill');
+
+    sumInput.value = sumInput.value.replace(/[^0-9]/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' руб'
+
+    // маска
+    function prettify(num) {
+        const n = num.toString();
+        return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ') + ' руб';
+    }
+
+    function range(input$, progress$, content) {
+        if (input$) {
+            const val = input$.value;
+            const min = input$.getAttribute('min');
+            const max = input$.getAttribute('max');
+            const step = input$.getAttribute('step');
+            const position = 100 / (max - step) * (val - step);
+            updateRangePosition(progress$, position);
+
+            input$.addEventListener('input', () => {
+                const val = input$.value;
+                const min = input$.getAttribute('min');
+                const max = input$.getAttribute('max');
+                const step = input$.getAttribute('step');
+                const position = 100 / (max - step) * (val - step);
+                updateRangePosition(progress$, position);
+                content.value = prettify(val);
+            });
+        }
+    }
+
+    function updateRangePosition(progress$, position) {
+        if (progress$) {
+            progress$.style.width = `${position}%`;
+        }
+    }
+
+    range(rangeInputSum, rangeTrackSum, sumInput);
+
+
+    sumInput.addEventListener('input', function () {
+
+        const minSum = rangeInputSum.getAttribute('min');
+        const maxSum = rangeInputSum.getAttribute('max');
+        const stepSum = rangeInputSum.getAttribute('step');
+
+        this.value = prettify(this.value.replace(/\D/g, ''))
+        if (+this.value.replace(/\D/g, '') > +maxSum) {
+            this.value = prettify(maxSum)
+            return
+        }
+        if (+this.value.replace(/\D/g, '') < +minSum) {
+            rangeInputSum.value = 0
+            rangeTrackSum.style.width = 0 + '%'
+            return
+        }
+        if (+this.value.replace(/\D/g, '') >= +minSum && +this.value.replace(/\D/g, '') <= +maxSum) {
+            rangeTrackSum.style.width = `${100 / (maxSum - stepSum) * (this.value.replace(/\D/g, '') - stepSum)}%`;
+            rangeInputSum.value = this.value.replace(/\D/g, '')
+        }
+    })
 
     $('[name*="phone"]').inputmask({
         mask: '+7 999 999 99 99'

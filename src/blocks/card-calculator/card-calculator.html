@@ -1,0 +1,45 @@
+<div class="card-calculator">
+    <div class="card-calculator__title">Ипотечный калькулятор</div>
+    <div class="card-calculator__form">
+        <form class="calculator-form">
+            <label class="calculator-form__label">
+                <span>Стоимость дома</span>
+                <input class="calculator-form__input" name="sum" value="">
+            </label>
+            <div class="calculator-form__cols">
+                <label class="calculator-form__label">
+                    <span>Ставка по кредиту %</span>
+                    <input class="calculator-form__input" name="percent" value="">
+                </label>
+                <label class="calculator-form__label">
+                    <span>Сроком на (лет)</span>
+                    <input class="calculator-form__input" name="term" value="">
+                </label>
+            </div>
+            <div class="calculator-form__range">
+                <div class="form-range">
+                    <div class="form-range__text">
+                        <span class="form-range__text--title">Первоначальный взнос:</span>
+                        <input class="form-range__text--sum form__input--range" type="text" value="200 000 руб">
+                    </div>
+                    <div class="form-range__slider">
+                            <span class="form-range__fill"></span>
+                            <input class="form-range__input" type="range" step="1000" min="50000" max="1000000"
+                                   value="200000">
+                    </div>
+                    <div class="form-range__values">
+                        <div class="form-range__value form-range__value--min">50 000</div>
+                        <div class="form-range__value form-range__value--max">1 000 000</div>
+                    </div>
+                </div>
+            </div>
+            <div class="calculator-form__payment">
+                <div class="form-payment">
+                    <div class="form-payment__title">Размер ежемесячного платежа:</div>
+                    <div class="form-payment__sum">79 000 руб</div>
+                </div>
+            </div>
+            <button class="calculator-form__button" type="submit">Отправить заявку</button>
+        </form>
+    </div>
+</div>
