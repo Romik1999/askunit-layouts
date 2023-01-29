@@ -215,11 +215,9 @@ $(function () {
     });
 
     var swiper = new Swiper(".mySwiper", {
-        loop: true,
+        loop: false,
         spaceBetween: 10,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
+        slidesPerView: 'auto',
     });
     var swiper2 = new Swiper(".mySwiper2", {
         loop: true,
