@@ -7,6 +7,8 @@
 }
 
 .gallery-top {
+  position: relative;
+
   &__item {
     height: 452px;
 
@@ -18,12 +20,41 @@
       height: 280px;
     }
 
-    & img{
+    & img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
+
+  &__arrow {
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 10;
+    cursor: pointer;
+    transition: 0.2s;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
 }
 
 .gallery-thumbs {
@@ -31,14 +62,14 @@
 
   &__item {
     height: 60px;
-    width: 60px!important;
+    width: 60px !important;
 
     @media screen and (max-width: 1199px) {
       height: 50px;
-      width: 50px!important;
+      width: 50px !important;
     }
 
-    & img{
+    & img {
       width: 100%;
       height: 100%;
       object-fit: cover;

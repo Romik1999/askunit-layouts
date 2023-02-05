@@ -277,6 +277,11 @@
     text-decoration-line: underline;
     color: #2B7DE0;
     margin-top: 6px;
+    cursor: pointer;
+
+    &:hover{
+      text-decoration-line: none;
+    }
   }
 }
 

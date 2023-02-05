@@ -223,8 +223,8 @@ $(function () {
         loop: true,
         spaceBetween: 10,
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".gallery-top__arrow--next",
+            prevEl: ".gallery-top__arrow--prev",
         },
         thumbs: {
             swiper: swiper,
