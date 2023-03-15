@@ -10,14 +10,14 @@
   position: relative;
 
   &__item {
-    height: 452px;
+    height: 452px!important;
 
     @media screen and (max-width: 1199px) {
-      height: 380px;
+      height: 380px!important;
     }
 
     @media screen and (max-width: 576px) {
-      height: 280px;
+      height: 280px!important;
     }
 
     & img {
