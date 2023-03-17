@@ -323,7 +323,7 @@ $(function () {
     // });
     // // end
 
-    $('input[type="range"]').rangeslider({
+    $('.range-slider').rangeslider({
         polyfill: false
     });
 
