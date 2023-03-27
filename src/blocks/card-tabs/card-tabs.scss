@@ -144,12 +144,17 @@
     }
   }
 
+  &__wrapper {
+    width: 100%;
+  }
+
   &__feedback {
+    width: 100%;
     margin-bottom: 24px;
   }
 
   &__table {
-
+    width: 100%;
   }
 }
 
